@@ -1,0 +1,26 @@
+Environment Setup
+1. τρέχω npm create-next-app --typescript my-airbnb
+2. διαγράφω όλα τα περιττά styles και εικόνες από το project
+3. βλέπω στο layout.tsx ότι από κει ξεκινάνε όλα γιατί έχει html -> body -> div#root -> app
+4. βλέπω στο page.tsx ότι από κει ξεκινάει το rendering του app
+5. tailwind setup => πατάω στο google tailwindcss με nextjs και ακολουθώ τα βήματα που λέει το documentation
+
+Σε συνέχεια του README.md,
+για να χρησιμοποιήσεις τα react-icons πρέπει να κάνεις εγκατάσταση με την εντολή:
+
+npm install react-icons
+
+Σε μερικά στυλ γράφω την ερμηνεία τους.
+flex flex-row items-center => display: flex; && align-items: center;
+hidden πάει μαζί με το md: block; από md pixels και κάτω να είναι hidden
+
+Navbar UI
+1. φτιάχνω ένα component navbar.tsx μέσα στο components/navbar
+2. φτιάχνω ένα component container.tsx μέσα στο components
+3. φτιάχνω ένα component logo.tsx μέσα στο components/navbar
+4. φτιάχνω ένα component search.tsx μέσα στο components/navbar
+5. φτιάχνω ένα component usermenu.tsx μέσα στο components/navbar
+6. φτιάχνω ένα component menuitem.tsx μέσα στο components/navbar
+7. φτιάχνω ένα component avatar.tsx μέσα στο components
+
+Auth UI
