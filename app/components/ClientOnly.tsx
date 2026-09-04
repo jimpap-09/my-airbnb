@@ -2,15 +2,24 @@
 
 import { useEffect, useState } from "react";
 
-const ClientOnly = () => {
+interface ClientOnlyProps {
+    children: React.ReactNode;
+}
+
+const ClientOnly = ({ children }: ClientOnlyProps) => {
 
     const [hasMounted, setHasMounted] = useState(false);
+
     useEffect(() => {
         setHasMounted(true);
     }, []);
 
+    if (!hasMounted) return null;
+
     return (
-        hasMounted ? <div>Client-side content</div> : null
+        <>
+            {children}
+        </>
     )
 }
 
