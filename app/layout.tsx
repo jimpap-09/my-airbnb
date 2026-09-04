@@ -28,7 +28,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     >
       <body className="min-h-full flex flex-col">
         <ClientOnly>
-          <Modal isOpen={true} />
+          <Modal title="Test Modal" isOpen={true} />
           <Navbar />
         </ClientOnly>
         {children}
