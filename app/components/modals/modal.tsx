@@ -147,7 +147,7 @@ const Modal = ({
                             <div className="flex flex-col gap-2 p-6">
                                 <div className="flex flex-row items-center gap-4 w-full">
 
-                                    <Button />
+                                    <Button small outline>My button</Button>
                                 </div>
                                 {footer}
                             </div>
