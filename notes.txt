@@ -24,3 +24,6 @@ Navbar UI
 7. φτιάχνω ένα component avatar.tsx μέσα στο components
 
 Auth UI
+1. Φτιάχνω το auth ui modal
+2. npm install zustand, axios
+3. npm install react-hook-form
