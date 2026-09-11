@@ -27,3 +27,4 @@ Auth UI
 1. Φτιάχνω το auth ui modal
 2. npm install zustand, axios
 3. npm install react-hook-form
+pause video 1:11:42
