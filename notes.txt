@@ -29,6 +29,8 @@ Auth UI
 3. npm install react-hook-form
 pause video 1:11:42
 4. npm install react-hot-toast
+5. φτιάχνω ένα hook που λέγεται useRegisterModal,
+όποτε είναι isOpen=true ανοίγει το registerModal αλλιώς όχι.
 
 DB
 Σε νεότερες εκδόσεις δεν υπάρχει φάκελος prisma οπότε τον δημιουργούμε εμείς
@@ -50,4 +52,19 @@ datasource db {
 4. φτιάχνω ένα .env αρχείο για το db connnection
 touch .env
 
-5. φτιάχνω μια βάση postgres στο docker
+5. Αφού φτιάξω λογαριασμό στο mongo db atlas
+ανιγράφω το connection string mongodb+srv://jimpap431_db_user:<db_password>@cluster0.spjqmnh.mongodb.net/
+στη μεταβλητή DATABASE_URL
+
+6. Σε περίπτωση αλλαγής κωδικού πάω στο all projects project0 security database acess και βάζω νέο κωδικό
+
+7. Τώρα που έχω database 
+Για να αποκτήσεις άμεση πρόσβαση στη βάση σου και να βεβαιωθείς ότι όλα είναι συνδεδεμένα σωστά, ακολούθησε αυτά τα 3 βασικά βήματα:
+
+Το MongoDB Atlas μπλοκάρει από προεπιλογή όλες τις συνδέσεις
+Στο MongoDB Atlas, πήγαινε στο αριστερό μενού στην ενότητα Security -> Network Access.
+Πάτα Add IP Address.
+Επίλεξε είτε Add Current IP Address (μόνο για το δικό σου δίκτυο) είτε Allow Access from Anywhere (0.0.0.0/0) για να μπορείς να συνδέεσαι από παντού χωρίς προβλήματα κατά το development.
+Πάτα Confirm.
+
+npx prisma db push
