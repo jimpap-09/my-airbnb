@@ -9,9 +9,9 @@ const Logo = () => {
     return (
         <Image
             alt="Logo"
-            className="md:block cursor-pointer"
-            height="100"
-            width="100"
+            className="md:block cursor-pointer w-auto h-auto"
+            height={100}
+            width={100}
             src="/images/airbnb-logo.webp"
             priority
             onClick={() => router.push("/")}

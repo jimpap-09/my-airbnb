@@ -28,3 +28,26 @@ Auth UI
 2. npm install zustand, axios
 3. npm install react-hook-form
 pause video 1:11:42
+4. npm install react-hot-toast
+
+DB
+Σε νεότερες εκδόσεις δεν υπάρχει φάκελος prisma οπότε τον δημιουργούμε εμείς
+1. npm install -D prisma
+2. npx prisma init
+3. γράφω τις εντολές παρακάτω και κάνω cp τον κώδικα
+mkdir -p prisma
+touch prisma/schema.prisma
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+4. φτιάχνω ένα .env αρχείο για το db connnection
+touch .env
+
+5. φτιάχνω μια βάση postgres στο docker

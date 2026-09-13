@@ -4,6 +4,7 @@ import Navbar from "./components/navbar/navbar";
 import "./globals.css";
 import ClientOnly from "./components/ClientOnly";
 import RegisterModal from "./components/modals/registerModal"
+import ToasterProvider from "./providers/toasterProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,6 +29,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     >
       <body className="min-h-full flex flex-col">
         <ClientOnly>
+          <ToasterProvider />
           <RegisterModal />
           <Navbar />
         </ClientOnly>
