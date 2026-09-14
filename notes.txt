@@ -75,3 +75,9 @@ touch .env
 έστω ότι είναι test
 
 npx prisma db push
+
+npm install @prisma/client @next-auth/prisma-adapter
+Για credential login
+npm install bcrypt
+
+Παύση βίντεο 2:00:00 στο ...nextauth.ts
