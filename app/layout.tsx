@@ -3,8 +3,10 @@ import { Geist, Geist_Mono } from "next/font/google";
 import Navbar from "./components/navbar/navbar";
 import "./globals.css";
 import ClientOnly from "./components/ClientOnly";
+import LoginModal from "./components/modals/loginModal";
 import RegisterModal from "./components/modals/registerModal"
 import ToasterProvider from "./providers/toasterProvider";
+import getCurrentUser from "./actions/getCurrentUser";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -21,7 +23,9 @@ export const metadata: Metadata = {
   description: "Airbnb clone built with Next.js 13, Tailwind CSS, and TypeScript",
 };
 
-export default function RootLayout({ children }: LayoutProps<"/">) {
+export default async function RootLayout({ children }: LayoutProps<"/">) {
+
+  const currentUser = await getCurrentUser();
   return (
     <html
       lang="en"
@@ -30,8 +34,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body className="min-h-full flex flex-col">
         <ClientOnly>
           <ToasterProvider />
+          <LoginModal />
           <RegisterModal />
-          <Navbar />
+          <Navbar currentUser={currentUser} />
         </ClientOnly>
         {children}
       </body>

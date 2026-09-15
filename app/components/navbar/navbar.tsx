@@ -1,9 +1,15 @@
 'use client';
 
+import { User } from "@prisma/client"
+
 import Container from "../container";
 import Logo from "./logo";
 import Search from "./search";
 import UserMenu from "./usermenu";
+
+interface NavbarProps {
+    currentUser?: User | null;
+}
 
 const Navbar = () => {
     return (
