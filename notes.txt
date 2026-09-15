@@ -93,4 +93,11 @@ pause 2:12:50
 μετάφερα το αρχείο pages/api/auth/[...nextauth] στο /api/auth/[...nextauth]/route.ts,
 γιατί εκεί είναι το endpoint του signIn from next-auth/react
 
-pause 2:24
+pause 2:24:00
+
+οπότε αυτό που πετύχαμε με όλο αυτό το next-auth σύστημα είναι να έχουμε πρόσβαση
+στη βάση απευθείας χωρίς backend και get/post requests
+
+τώρα μένει να ολοκληρώσουμε το authentication μέσω google/github
+
+2:33:00 pause
